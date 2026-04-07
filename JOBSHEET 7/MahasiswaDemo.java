@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class MahasiswaDemo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        MahasiswaBerprestasi01 list = new MahasiswaBerprestasi01(5);
+        MahasiswaBerprestasi01 list = new MahasiswaBerprestasi01();
 
         for (int i = 0; i < list.listMhs.length; i++) {
             System.out.println("Masukkan data mahasiswa ke-" + (i + 1));
@@ -35,7 +35,7 @@ public class MahasiswaDemo {
         System.out.print("Masukkan IPK yang dicari: ");
         double cari = Double.parseDouble(sc.nextLine());
 
-        int pos = list.sequentialSearch(cari);
+        int pos = list.sequentialSearching(cari);
         list.tampilPosisi(cari, pos);
         list.tampilDataSearch(cari, pos);
 

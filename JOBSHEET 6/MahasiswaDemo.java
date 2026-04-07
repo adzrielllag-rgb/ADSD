@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class MahasiswaDemo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        MahasiswaBerprestasi01 list = new MahasiswaBerprestasi01(5);
+        MahasiswaBerprestasi01 list = new MahasiswaBerprestasi01();
 
         System.out.print("Masukkan jumlah mahasiswa (maks 5): ");
         int n = sc.nextInt();
