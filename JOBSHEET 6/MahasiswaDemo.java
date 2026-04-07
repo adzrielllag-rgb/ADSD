@@ -1,34 +1,37 @@
-public class MahasiswaDemo {
-public static void main(String[] args) {
+import java.util.Scanner;
 
+public class MahasiswaDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         MahasiswaBerprestasi01 list = new MahasiswaBerprestasi01(5);
 
-        Mahasiswa01 m1 = new Mahasiswa01("123", "Andi", "1A", 3.5);
-        Mahasiswa01 m2 = new Mahasiswa01("124", "Budi", "1A", 3.8);
-        Mahasiswa01 m3 = new Mahasiswa01("125", "Citra", "1A", 3.2);
-        Mahasiswa01 m4 = new Mahasiswa01("126", "Dina", "1A", 3.9);
-        Mahasiswa01 m5 = new Mahasiswa01("127", "Eko", "1A", 3.6);
+        System.out.print("Masukkan jumlah mahasiswa (maks 5): ");
+        int n = sc.nextInt();
+        sc.nextLine();
 
-        list.tambah(m1);
-        list.tambah(m2);
-        list.tambah(m3);
-        list.tambah(m4);
-        list.tambah(m5);
-        
-        System.out.println("Data Sebelum Sorting ");
+        for (int i = 1; i <= n; i++) {
+            System.out.println("--- Masukkan Data Mahasiswa ke-" + i + " ---");
+            System.out.print("NIM   : ");
+            String nim = sc.nextLine();
+            System.out.print("Nama  : ");
+            String nama = sc.nextLine();
+            System.out.print("Kelas : ");
+            String kelas = sc.nextLine();
+            System.out.print("IPK   : ");
+            double ipk = sc.nextDouble();
+            sc.nextLine();
+
+            Mahasiswa01 mhs = new Mahasiswa01(nim, nama, kelas, ipk);
+            list.tambah(mhs);
+        }
+
+        System.out.println("\nData mahasiswa sebelum sorting:");
         list.tampil();
 
-        System.out.println(" Bubble Sort (Descending IPK) ");
         list.bubbleSort();
+        System.out.println("Data mahasiswa setelah sorting berdasarkan IPK (DESC):");
         list.tampil();
 
-        System.out.println(" Selection Sort (Ascending IPK) ");
-        list.selectionSort();
-        list.tampil();
-
-        System.out.println(" Insertion Sort (Ascending IPK) ");
-        list.insertionSort();
-        list.tampil();
+        sc.close();
     }
 }
-
