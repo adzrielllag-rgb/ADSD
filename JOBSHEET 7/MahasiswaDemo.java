@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class MahasiswaDemo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -19,7 +18,6 @@ public class MahasiswaDemo {
 
             System.out.print("IPK   : ");
             double ipk = Double.parseDouble(sc.nextLine());
-
             System.out.println("-----------------------------");
 
             list.tambah(new Mahasiswa01(nim, nama, kelas, ipk));
@@ -54,5 +52,7 @@ public class MahasiswaDemo {
         int pos2 = list.findBinarySearch(cari2, 0, list.idx - 1);
         list.tampilPosisi(cari2, pos2);
         list.tampilDataSearch(cari2, pos2);
+
+        sc.close();
     }
 }
