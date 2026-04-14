@@ -1,5 +1,4 @@
 package CM;
-
 public class pencarianCM {
 
    // ===================== INSERTION SORT (asc by denda) =====================
@@ -26,6 +25,17 @@ public class pencarianCM {
             }
         }
         return posisi;
+    }
+    // MODIFIKASI CM (UTS ASD TEORI)
+    // ===================== CARI BUKU TERBIT TERBARU =====================  // 
+    static bukuCM bukuTerbaru(bukuCM[] listBuku) {
+        bukuCM terbaru = listBuku[0];                 // 
+        for (int i = 1; i < listBuku.length; i++) {   
+            if (listBuku[i].tahunTerbit > terbaru.tahunTerbit) { // jika tahun lebih besar
+                terbaru = listBuku[i];                 // buku tahun terbit terbaru diperbarui
+            }
+        }
+        return terbaru;                                // kembalikan buku paling baru
     }
 
 }

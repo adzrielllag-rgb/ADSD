@@ -11,6 +11,8 @@ public class bukuCM {
     }
 
     void tampilBuku() {
-        System.out.println("Kode: " + kodeBuku + " | Judul: " + judul + " | Tahun: " + tahunTerbit);
+        System.out.println("Kode: " + kodeBuku + 
+                    " | Judul: " + judul + 
+                    " | Tahun: " + tahunTerbit);
     }
 }

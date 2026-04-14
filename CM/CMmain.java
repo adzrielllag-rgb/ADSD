@@ -31,7 +31,6 @@ public class CMmain {
         };
 
         int pilih;
-
         do {
             System.out.println("\n======= SISTEM PEMINJAMAN RUANG BACA JTI =======");
             System.out.println("1. Tampilkan Mahasiswa");
@@ -39,6 +38,7 @@ public class CMmain {
             System.out.println("3. Tampilkan Peminjaman");
             System.out.println("4. Urutkan Berdasarkan Denda");
             System.out.println("5. Cari Berdasarkan NIM");
+            System.out.println("6. Cari Buku Terbit Terbaru");
             System.out.println("0. Keluar");
             System.out.print("Pilih: ");
             pilih = sc.nextInt();
@@ -86,6 +86,13 @@ public class CMmain {
                         System.out.println("Mahasiswa tidak ditemukan.");
                     }
                     break;
+
+                    // MODIFIKASI CM (UTS ASD TEORI)
+                case 6:
+                    bukuCM terbaru = pencarianCM.bukuTerbaru(buku);
+                    System.out.println("\nBuku Terbit Terbaru:");
+                    terbaru.tampilBuku();
+                    break;    
                 case 0:
                     System.out.println("Keluar dari program. Terima kasih!");
                     break;
