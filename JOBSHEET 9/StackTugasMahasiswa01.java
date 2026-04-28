@@ -59,7 +59,15 @@ public class StackTugasMahasiswa01 {
             return null;
         }
     }
-
+    
+    // Tampilkan semua daftar tugas
+    public void print() {
+        for (int i = top; i >= 0; i--) {
+            System.out.println(stack[i].nama + "\t" + stack[i].nim + "\t" + stack[i].kelas);
+        }
+        System.out.println("");
+    }
+    
     // Lihat tugas terbawah (bottom)
     public mahasiswa01 peekBottom() {
         if (!isEmpty()) {
@@ -73,14 +81,6 @@ public class StackTugasMahasiswa01 {
     // Hitung jumlah tugas yang sudah dikumpulkan
     public int hitungTugas() {
         return top + 1;
-    }
-
-    // Tampilkan semua daftar tugas
-    public void print() {
-        for (int i = top; i >= 0; i--) {
-            System.out.println(stack[i].nama + "\t" + stack[i].nim + "\t" + stack[i].kelas);
-        }
-        System.out.println("");
     }
 
     // Konversi nilai desimal ke biner menggunakan Stack

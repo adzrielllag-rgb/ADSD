@@ -6,7 +6,7 @@ public class Mahasiswademo {
         StackTugasMahasiswa01 stack = new StackTugasMahasiswa01(5);
         Scanner scan = new Scanner(System.in);
         int pilih;
-
+        
         do {
             System.out.println("\nMenu:");
             System.out.println("1. Mengumpulkan Tugas");
