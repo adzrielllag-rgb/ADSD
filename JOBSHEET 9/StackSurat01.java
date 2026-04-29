@@ -1,3 +1,5 @@
+package jobsheet9;
+
 public class StackSurat01 {
     Surat01[] stack;
     int size;

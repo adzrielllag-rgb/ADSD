@@ -1,3 +1,5 @@
+package jobsheet9;
+
 public class StackKonversi01 {
     int[] tumpukanBiner;
     int size;

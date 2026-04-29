@@ -1,3 +1,5 @@
+package jobsheet7;
+
 public class Mahasiswa01 {
     String nim;
     String nama;

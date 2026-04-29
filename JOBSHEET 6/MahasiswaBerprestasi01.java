@@ -1,3 +1,5 @@
+package jobsheet6;
+
 public class MahasiswaBerprestasi01 {
     Mahasiswa01[] listMhs = new Mahasiswa01[5];
     int idx;

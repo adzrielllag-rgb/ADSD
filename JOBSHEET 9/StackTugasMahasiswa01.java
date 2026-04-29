@@ -1,3 +1,5 @@
+package jobsheet9;
+
 public class StackTugasMahasiswa01 {
     mahasiswa01[] stack;
     int size;
