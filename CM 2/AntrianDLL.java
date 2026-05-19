@@ -37,14 +37,14 @@ public class AntrianDLL {
         System.out.println("Antrian berhasil ditambahkan dengan nomor: " + counterAntrian);
     }
 
-    // ===== CETAK SELURUH ANTRIAN =====
-    public void cetakAntrian() {
+    // ===== TOTAL PEMBELI =====
+    public void totalPembeli() {
         if (isEmpty()) {
             System.out.println("Antrian kosong.");
             return;
         }
         System.out.println("==============================");
-        System.out.println("Daftar Antrian Pembeli");
+        System.out.println("Total Daftar Pembeli");
         System.out.println("==============================");
         System.out.printf("%-12s %-20s %s%n", "No Antrian", "Nama", "No HP");
         System.out.println("------------------------------");
@@ -52,11 +52,16 @@ public class AntrianDLL {
         NodeAntrian current = head;
         while (current != null) {
             System.out.printf("%-12d %-20s %s%n",
-                current.data.noAntrian,
-                current.data.namaPembeli,
-                current.data.noHp);
+            current.data.noAntrian,
+            current.data.namaPembeli,
+            current.data.noHp);
             current = current.next;
         }
+
+        // MODIF KUIZ : Tampilkan total pembeli dalam antrian
+        System.out.println("==============================");
+        System.out.println("Total Pembeli dalam Antrian: " + size);
+        System.out.println("==============================");
     }
 
     // ===== HAPUS ANTRIAN TERDEPAN (DEQUEUE) + INPUT PESANAN =====
