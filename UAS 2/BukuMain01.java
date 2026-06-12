@@ -1,8 +1,10 @@
 public class BukuMain01 {
      public static void main(String[] args) {
 
+        //membuat objek BST
         BinarySearchTree01 bst = new BinarySearchTree01();
 
+        // Menambahkan data buku ke dalam BST
         bst.add(new Buku01("BK105", "Struktur Data", "Andi", 2020));
         bst.add(new Buku01("BK102", "Algoritma Dasar", "Budi", 2019));
         bst.add(new Buku01("BK108", "Basis Data", "Citra", 2021));

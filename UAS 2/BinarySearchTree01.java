@@ -2,14 +2,17 @@ public class BinarySearchTree01 {
 
     Node01 root;
 
+     // Konstruktor BST
     public BinarySearchTree01() {
         root = null;
     }
 
+    // Cek apakah BST kosong
     public boolean isEmpty() {
         return root == null;
     }
 
+    // Menambahkan buku ke dalam BST
     public void add(Buku01 data) {
 
         Node01 newNode = new Node01(data);
@@ -46,6 +49,7 @@ public class BinarySearchTree01 {
         }
     }
 
+    // Mencari buku berdasarkan kode buku
     public boolean find(String kodeBuku) {
 
         Node01 current = root;
@@ -66,6 +70,7 @@ public class BinarySearchTree01 {
         return false;
     }
 
+    // Traversal pre-order(Root - Kiri - Kanan)
     public void traversePreOrder(Node01 node) {
 
         if (node != null) {
@@ -74,7 +79,8 @@ public class BinarySearchTree01 {
             traversePreOrder(node.right);
         }
     }
-    
+
+    // Traversal in-order(Kiri - Root - Kanan)
     public void traverseInOrder(Node01 node) {
 
         if (node != null) {
@@ -84,7 +90,7 @@ public class BinarySearchTree01 {
         }
     }
 
-
+    // Menghitung jumlah buku dalam BST
     public int hitungJumlahBuku(Node01 node) {
 
         if (node == null) {
@@ -95,6 +101,7 @@ public class BinarySearchTree01 {
                  + hitungJumlahBuku(node.right);
     }
 
+    // Mencari buku tertua berdasarkan tahun terbit
     public Buku01 cariBukuTertua(Node01 node) {
 
         if (node == null) {

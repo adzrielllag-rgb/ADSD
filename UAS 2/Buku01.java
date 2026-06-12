@@ -4,6 +4,7 @@ public class Buku01 {
     String penulis;
     int tahunTerbit;
 
+     // Konstruktor untuk mengisi data buku
     public Buku01(String kodeBuku, String judul, String penulis, int tahunTerbit) {
         this.kodeBuku = kodeBuku;
         this.judul = judul;
@@ -11,6 +12,7 @@ public class Buku01 {
         this.tahunTerbit = tahunTerbit;
     }
 
+    // Menampilkan informasi buku
     public void tampilInformasi() {
         System.out.println("Kode Buku   : " + kodeBuku);
         System.out.println("Judul       : " + judul);
