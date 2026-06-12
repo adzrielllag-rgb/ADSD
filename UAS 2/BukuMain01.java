@@ -10,13 +10,13 @@ public class BukuMain01 {
         bst.add(new Buku01("BK104", "Sistem Operasi", "Eka", 2022));
         bst.add(new Buku01("BK107", "Jaringan Komputer", "Fajar", 2017));
 
-        System.out.println("===== DATA BUKU IN ORDER =====");
+        System.out.println("------- DATA BUKU IN ORDER --------");
         bst.traverseInOrder(bst.root);
 
-        System.out.println("===== DATA BUKU PRE ORDER =====");
+        System.out.println("------- DATA BUKU PRE ORDER --------");
         bst.traversePreOrder(bst.root);
 
-        System.out.println("===== PENCARIAN DATA =====");
+        System.out.println("------- PENCARIAN DATA --------");
 
         if (bst.find("BK104")) {
             System.out.println("BK104 ditemukan");
@@ -37,7 +37,7 @@ public class BukuMain01 {
 
         System.out.println();
 
-        System.out.println("===== BUKU TERTUA =====");
+        System.out.println("------- BUKU TERTUA --------");
 
         Buku01 tertua = bst.cariBukuTertua(bst.root);
         tertua.tampilInformasi();
